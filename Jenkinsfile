@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('frontendtest') {
+        stage('version test') {
           steps {
-            sh '''python3 -version
+            sh '''python3 --version
 '''
           }
         }
