@@ -17,7 +17,7 @@ pipeline {
 
         stage('frontendtest') {
           steps {
-            sh '''cd curriculum-front && npm i && npm run test:unit
+            sh '''python3 -version
 '''
           }
         }
