@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout Code') {
+    stage('SSH test') {
       steps {
-        git(url: 'https://github.com/Nettune057/Pipeline-CI-CD', branch: 'master')
+        sh '''ssh ubuntu@172.17.0.3\'
+ls -la
+\''''
       }
     }
 
@@ -21,13 +23,6 @@ pipeline {
           }
         }
 
-      }
-    }
-
-    stage('build') {
-      steps {
-        sh '''docker build -f python/Dockerfile . 
-'''
       }
     }
 
