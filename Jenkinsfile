@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('SSH test') {
       steps {
-        sh '''ssh ubuntu@172.17.0.3\'
+        sh '''ssh -tt ubuntu@172.17.0.3\'
 ls -la
 \''''
       }
